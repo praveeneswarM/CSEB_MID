@@ -18,42 +18,42 @@ spec:
 
 ---
 # Regular ClusterIP service for application access
-apiVersion: v1
-kind: Service
-metadata:
-  name: mongodb
-  labels:
-    app: mongodb
-    component: cluster-service
-spec:
-  type: ClusterIP
-  ports:
-  - name: mongodb
-    port: 27017
-    targetPort: 27017
-    protocol: TCP
-  selector:
-    app: mongodb
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: mongodb
+#   labels:
+#     app: mongodb
+#     component: cluster-service
+# spec:
+#   type: ClusterIP
+#   ports:
+#   - name: mongodb
+#     port: 27017
+#     targetPort: 27017
+#     protocol: TCP
+#   selector:
+#     app: mongodb
 
 ---
 # NodePort service for external access (development/debugging only)
-apiVersion: v1
-kind: Service
-metadata:
-  name: mongodb-nodeport
-  labels:
-    app: mongodb
-    component: nodeport-service
-spec:
-  type: NodePort
-  ports:
-  - name: mongodb
-    port: 27017
-    targetPort: 27017
-    nodePort: 31017
-    protocol: TCP
-  selector:
-    app: mongodb
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: mongodb-nodeport
+#   labels:
+#     app: mongodb
+#     component: nodeport-service
+# spec:
+#   type: NodePort
+#   ports:
+#   - name: mongodb
+#     port: 27017
+#     targetPort: 27017
+#     nodePort: 31017
+#     protocol: TCP
+#   selector:
+#     app: mongodb
 
 ---
 # Network Policy for MongoDB access control

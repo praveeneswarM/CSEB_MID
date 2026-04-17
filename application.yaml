@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: skillexchange
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/nimeshsv814/CSEB_MID.git
+    targetRevision: main
+    path: helm
+    helm:
+      values: |
+        userprofile:
+          activeVersion: blue
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

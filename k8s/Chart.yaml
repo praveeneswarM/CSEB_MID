@@ -1,0 +1,5 @@
+apiVersion: v2
+name: CSEB
+description: A Helm Chart for CSEB
+version: 1.0.0 
+appVersion: "latest"
