@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: skillexchange-app
-        image: hardyboy20/skillexchange-app:latest
+        image: {{ .Values.image }}
         ports:
         - containerPort: 3000
           name: http
