@@ -11,7 +11,7 @@ spec:
     blueGreen:
       activeService: cseb-active
       previewService: cseb-preview
-      autoPromotionEnabled: false
+      autoPromotionEnabled: true
       scaleDownDelaySeconds: 30
   selector:
     matchLabels:
