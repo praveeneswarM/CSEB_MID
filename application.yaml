@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/nimeshsv814/CSEB_MID.git
+    repoURL: https://github.com/praveeneswarM/CSEB_MID.git
     targetRevision: main
     path: k8s
     helm:
