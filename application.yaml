@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/nimeshsv814/CSEB_MID.git
     targetRevision: main
-    path: helm
+    path: k8s
     helm:
       values: |
         userprofile:
